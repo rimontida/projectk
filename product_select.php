@@ -13,12 +13,12 @@
      $sql = "SELECT * FROM tbl_products";
      $result = mysqli_query($conn , $sql);
      while($row=mysqli_fetch_assoc($result)){
-        echo "ชื่อสินค้า $row[name] <br/>";
-        echo "ราคา $row[price] บาท <br/>";
-        echo "จำนวนสินค้าในคลัง $row[stock] <br/>";
+        echo "ชื่อสินค้า : $row[title] <br/>";
+        echo "ราคา : $row[price] บาท <br/>";
+        echo "จำนวนสินค้าในคลัง : $row[stock] <br/>";
         echo "<img src=$row[img] width='200px' <br/><br/>";
-        echo "$row[description]  <br/>";
-        echo "$row[cat_name]  <br/>";
+        echo "รายละเอียดสินค้า : $row[description]  <br/>";
+        echo "ประเภทสินค้า : $row[cat_name]  <br/>";
         echo "<hr/>"; //ขีดเส้นแบ่งแถว
      }
 
